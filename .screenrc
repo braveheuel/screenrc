@@ -1,0 +1,10 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+caption always "%{= kG}%-31=%{= kG}[ %{B}system load: %{W}%l %{g}]"
+
+screen -t local 0
+startup_message off
+
+attrcolor b ".I"    # allow bold colors - necessary for some reason
+termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
