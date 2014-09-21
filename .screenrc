@@ -7,11 +7,10 @@ hardstatus string "%{= KW} [%H] %{= Kw}%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw %=[%`]"
 # For hardstatus the backtick function
 backtick 0 30 30 sh -c 'screen -ls | grep --color=no -o "$PPID[^[:space:]]*"'
 
-screen -t local 0
 startup_message off
 
 # Colors enabled
 attrcolor b ".I"
-defbce "on"
+term screen-256color
 
-term rxvt-unicode-256color
+screen -t local 0
